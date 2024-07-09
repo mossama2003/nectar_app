@@ -1,4 +1,4 @@
-# nectar_app_test
+# nectar_app
 
 A new Flutter project.
 
