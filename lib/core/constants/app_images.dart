@@ -9,6 +9,12 @@ class AppImages {
   static const String apple = '$_images/apple.png';
   static const String pulses = '$_images/pulses.png';
   static const String vector = '$_images/Vector.png';
+  static const String fruits = '$_images/fruits.png';
+  static const String oil = '$_images/oil.png';
+  static const String meat = '$_images/meat.png';
+  static const String bakery = '$_images/bakery.png';
+  static const String dairy = '$_images/dairy.png';
+  static const String beverages = '$_images/beverages.png';
 
   /// ******************************************** ///
   static const String whiteLogo = '$_svg/white_logo.svg';

@@ -13,14 +13,16 @@ import '../widgets/product_widget.dart';
 class HomeScreenContent extends StatelessWidget {
   const HomeScreenContent({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.only(top: 58, right: 24, left: 24),
+      physics: const BouncingScrollPhysics(),
       child: Column(
         children: [
-          SvgPicture.asset(AppImages.carrotLogo),
+          Padding(
+            padding: const EdgeInsets.only(top: 45),
+            child: SvgPicture.asset(AppImages.carrotLogo),
+          ),
           const SizedBox(height: 7),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -32,8 +34,7 @@ class HomeScreenContent extends StatelessWidget {
                   color: AppColors.darkGrey.withOpacity(0.8),
                 ),
                 text:
-                    'Welcome ${AuthCubit.get(context).userName!}'
-                        .toUpperCase(),
+                    'Welcome ${AuthCubit.get(context).userName!}'.toUpperCase(),
                 textStyle: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
@@ -43,96 +44,118 @@ class HomeScreenContent extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          const CustomInputField(
-            hint: 'Search Store',
-            prefix: Icon(Icons.search_rounded),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: CustomInputField(
+              hint: 'Search Store',
+              prefix: Icon(Icons.search_rounded),
+            ),
           ),
           Column(
             children: [
-              const SizedBox(height: 20),
               const SizedBox(height: 30),
-              const Row(
-                children: [
-                  Text(
-                    'Exclusive Offer',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                      Text(
+                        'Exclusive Offer',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    Spacer(),
+                    Text(
+                      'See all',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.primaryColor,
+                      ),
                     ),
-                  ),
-                  Spacer(),
-                  Text(
-                    'See all',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.primaryColor,
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              const SizedBox(
-                height: 248,
-                child: ProductWidget(),
-              ),
-
-              const SizedBox(height: 30),
-              const Row(
-                children: [
-                  Text(
-                    'Best Selling',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  Spacer(),
-                  Text(
-                    'See all',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.primaryColor,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               const SizedBox(height: 20),
               const SizedBox(
                 height: 248,
-                child: ProductWidget(),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 15),
+                  child: ProductWidget(),
+                ),
               ),
               const SizedBox(height: 30),
-              const Row(
-                children: [
-                  Text(
-                    'Groceries',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Text(
+                      'Best Selling',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                  ),
-                  Spacer(),
-                  Text(
-                    'See all',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.primaryColor,
+                    Spacer(),
+                    Text(
+                      'See all',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.primaryColor,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
+              const SizedBox(
+                height: 248,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 15),
+                  child: ProductWidget(),
+                ),
+              ),
+              const SizedBox(height: 30),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Text(
+                      'Groceries',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Spacer(),
+                    Text(
+                      'See all',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 20),
               SizedBox(
                 height: AppSize.heightScale(context, 80),
-                child: const GroceriesWidget(),
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 15),
+                  child: GroceriesWidget(),
+                ),
               ),
               SizedBox(height: AppSize.heightScale(context, 20)),
               const SizedBox(
                 height: 248,
-                child: ProductWidget(),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 15),
+                  child: ProductWidget(),
+                ),
               ),
               const SizedBox(height: 30),
             ],

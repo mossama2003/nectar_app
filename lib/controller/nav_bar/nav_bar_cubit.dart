@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nectar_app_test/view/screens/explore_screen.dart';
 
 import '../../view/screens/cart_screen.dart';
 import '../../view/screens/fav_screen.dart';
@@ -17,9 +18,7 @@ class NavBarCubit extends Cubit<NavBarState> {
 
   List<Widget> screens = [
     const HomeScreenContent(),
-    const Center(
-      child: Text('Explore'),
-    ),
+    const ExploreScreen(),
     const CartScreen(),
     const FavScreen(),
     const AccountScreen(),

@@ -7,7 +7,15 @@ class AppColors {
 
   static const Color antiFlashWhite = Color(0xfff2F3F2);
 
+  static const Color darkSalmon = Color(0xffF7A593);
+
+  static const Color plum = Color(0xffD3B0E0);
+
+  static const Color khaki = Color(0xffFDE598);
+
   static const Color lightGrey = Color(0xffB3B3B3);
+
+  static const Color lightBlue = Color(0xffB7DFF5);
 
   static const Color mediumGrey = Color(0xff7C7C7C);
 
