@@ -6,7 +6,7 @@ import '../../controller/auth/auth_cubit.dart';
 import '../../core/app_helper/app_navigator.dart';
 import '../../core/app_helper/app_validators.dart';
 import '../../core/custom_widgets/custom_text_button.dart';
-import '../../core/custom_widgets/custom_text_form_field.dart';
+import '../../core/custom_widgets/custom_text_form_field.dart'; 
 import '../../core/style/app_colors.dart';
 import '../../params/auth_params.dart';
 import '../widgets/blurred_colored_widget.dart';
